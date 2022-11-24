@@ -1,3 +1,4 @@
+package bank.presentation;
 class LookupInterface {
     public static run() {
         System.out.println("=====================================================");

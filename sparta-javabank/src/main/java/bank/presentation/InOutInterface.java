@@ -1,3 +1,4 @@
+package bank.presentation;
 class InOutInterface {
     public static run() {
         System.out.println("=====================================================");
