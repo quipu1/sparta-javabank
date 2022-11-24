@@ -1,5 +1,7 @@
 package bank;
 
+import bank.presentation.*;
+
 public class Main {
     static Scanner scanner = new Scanner(System.in);
     pubic static void main(String[] args) {
@@ -8,7 +10,7 @@ public class Main {
         TransactionalInformationList transactionalInformationList = new TransactionalInformationList();
 
         while(true) {
-            uinterface.inputList();
+            StartInterface.run();
             System.out.print("입력 > ");
             String input = scanner.next();
             switch (input) {
@@ -30,21 +32,21 @@ public class Main {
                     // 1 입력 - 계좌번호로 내 계좌 찾기
                     // 2 입력 - 이름으로 내 계좌 찾기
                     if (input == 1) {
-                        System.out.println("계좌번호로 내 계좌 찾기")
-                        System.out.println("계좌번호를 입력해주세요.")
-                        System.out.println("계좌번호: ")
+                        System.out.println("계좌번호로 내 계좌 찾기");
+                        System.out.println("계좌번호를 입력해주세요.");
+                        System.out.println("계좌번호: ");
                         String accountnum = scanner.next();
                         bank.searchAccountnumAccount(accountnum);
                         break;
                     } else if (input == 2) {
-                        System.out.println("이름으로 내 계좌 찾기")
-                        System.out.println("소유주 명을 입력해주세요.")
-                        System.out.println("계좌 소유주 명: ")
+                        System.out.println("이름으로 내 계좌 찾기");
+                        System.out.println("소유주 명을 입력해주세요.");
+                        System.out.println("계좌 소유주 명: ");
                         String owner = scanner.next();
                         bank.searchAccountnumAccount(owner);
                         break;
                     } else {
-                        System.out.println("잘못 입력하셨습니다.")
+                        System.out.println("잘못 입력하셨습니다.");
                         break;
                     }
                 case "3":
@@ -96,33 +98,33 @@ public class Main {
                     // 1. 입금
                     // 2. 출금
                     if (input == 1) {
-                        System.out.println("입금하기")
-                        System.out.println("입금을 위한 정보를 입력해주세요.")
-                        System.out.println("입금자 명: ")
+                        System.out.println("입금하기");
+                        System.out.println("입금을 위한 정보를 입력해주세요.");
+                        System.out.println("입금자 명: ");
                         String name = scanner.next();
-                        System.out.println("입금할 계좌: ")
+                        System.out.println("입금할 계좌: ");
                         String account = scanner.next();
-                        System.out.println("입금할 금액: ")
+                        System.out.println("입금할 금액: ");
                         int money = scanner.next();
                         Account depositeAccount = bank.searchAccountnumAccount(account);
-                        depositeAccount.deposit(name, account, money)
-                        transactionalInformationList.writeTransaction(1, name, account, money)
+                        depositeAccount.deposit(name, account, money);
+                        transactionalInformationList.writeTransaction(1, name, account, money);
                         break;
                     } else if (input == 2) {
-                        System.out.println("출금")
-                        System.out.println("출금을 위한 정보를 입력해주세요.")
-                        System.out.println("출금자 명: ")
+                        System.out.println("출금");
+                        System.out.println("출금을 위한 정보를 입력해주세요.");
+                        System.out.println("출금자 명: ");
                         String name = scanner.next();
-                        System.out.println("출금할 계좌: ")
+                        System.out.println("출금할 계좌: ");
                         String account = scanner.next();
-                        System.out.println("출금할 금액: ")
+                        System.out.println("출금할 금액: ");
                         int money = scanner.next();
                         Account withdrawAccount = bank.searchAccountnumAccount(account);
-                        withdrawAccount.withdraw(name, account, money)
-                        transactionalInformationList.writeTransaction(2, name, account, money)
+                        withdrawAccount.withdraw(name, account, money);
+                        transactionalInformationList.writeTransaction(2, name, account, money);
                         break;
                     } else {
-                        System.out.println("잘못 입력하셨습니다.")
+                        System.out.println("잘못 입력하셨습니다.");
                         break;
                     }
                 case "5":
@@ -132,8 +134,8 @@ public class Main {
                     String managerpassword = scanner.next();
                     boolean check = bank.checkManager(managerpassword);
                     if (check) {
-                        System.out.println("관리자 확인이 되었습니다.")
-                        System.out.println("해당 은행에 등록된 계좌 목록")
+                        System.out.println("관리자 확인이 되었습니다.");
+                        System.out.println("해당 은행에 등록된 계좌 목록");
                         bank.showAccounts();
                         break;
                     } else {
@@ -143,7 +145,6 @@ public class Main {
 
                 case "q":
                     System.out.println("프로그램이 종료되었습니다");
-                    uinterface.endUI();
                     System.exit(0);
             }
         }
