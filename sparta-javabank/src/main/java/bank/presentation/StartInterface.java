@@ -1,3 +1,4 @@
 class StartInterface {
-    public static run() {}
+    public static run() {
+    }
 }
