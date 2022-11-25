@@ -112,6 +112,7 @@ public class Main {
                         String name4 = scanner.next();
                         System.out.print("입금할 계좌: ");
                         String account = scanner.next();
+                        System.out.println("입금 최대 금액은 20억입니다.");
                         System.out.print("입금할 금액: ");
                         int money = scanner.nextInt();
                         Account depositAccount = bank.getMyAccountWithoutPassword(name4, account);
@@ -140,6 +141,7 @@ public class Main {
                     System.out.println("관리자 확인을 위해 비밀번호를 입력해주세요.");
                     System.out.print("비밀번호: ");
                     String managerPassword = scanner.next();
+                    System.out.println("소유주 명 |   계좌번호   |   잔액");
                     bank.showAccountsAll(managerPassword);
                     break;
 
