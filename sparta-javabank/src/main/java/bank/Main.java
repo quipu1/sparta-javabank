@@ -38,14 +38,14 @@ public class Main {
                     if (input2 == 1) {
                         System.out.println("계좌번호로 내 계좌 찾기");
                         System.out.println("계좌번호를 입력해주세요.");
-                        System.out.println("계좌번호: ");
+                        System.out.print("계좌번호: ");
                         String accountNum = scanner.next();
                         bank.searchAccountNumAccount(accountNum);
                         break;
                     } else if (input2 == 2) {
                         System.out.println("이름으로 내 계좌 찾기");
-                        System.out.println("소유주 명을 입력해주세요.");
-                        System.out.println("계좌 소유주 명: ");
+                        System.out.print("소유주 명을 입력해주세요.");
+                        System.out.print("계좌 소유주 명: ");
                         String owner = scanner.next();
                         bank.searchNameAccount(owner);
                         break;
@@ -108,11 +108,11 @@ public class Main {
                     if (input4 == 1) {
                         System.out.println("입금하기");
                         System.out.println("입금을 위한 정보를 입력해주세요.");
-                        System.out.println("입금자 명: ");
+                        System.out.print("입금자 명: ");
                         String name4 = scanner.next();
-                        System.out.println("입금할 계좌: ");
+                        System.out.print("입금할 계좌: ");
                         String account = scanner.next();
-                        System.out.println("입금할 금액: ");
+                        System.out.print("입금할 금액: ");
                         int money = scanner.nextInt();
                         Account depositAccount = bank.getMyAccountWithoutPassword(name4, account);
                         depositAccount.deposit(money);
@@ -121,11 +121,11 @@ public class Main {
                     } else if (input4 == 2) {
                         System.out.println("출금");
                         System.out.println("출금을 위한 정보를 입력해주세요.");
-                        System.out.println("출금자 명: ");
+                        System.out.print("출금자 명: ");
                         String name4_2 = scanner.next();
-                        System.out.println("출금할 계좌: ");
+                        System.out.print("출금할 계좌: ");
                         String account = scanner.next();
-                        System.out.println("출금할 금액: ");
+                        System.out.print("출금할 금액: ");
                         int money = scanner.nextInt();
                         Account withdrawAccount = bank.getMyAccountWithoutPassword(name4_2, account);
                         withdrawAccount.withdraw(money);
