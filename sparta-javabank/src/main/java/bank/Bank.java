@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Pattern;
 
 class Bank implements Atm {
 
@@ -50,7 +51,16 @@ class Bank implements Atm {
         }
 
     } //전체 계좌 조회
+    public void isAccountNum(String accountNum) {
+        String regExp = "([0-9]{6}\\-[0-9,\\-]{6})";
 
+        boolean result = Pattern.matches(regExp, accountNum);
+        if (result) {
+            System.out.println("올바른 계좌번호 형식입니다.");
+        } else {
+            System.out.println("올바른 계좌번호 형식이 아닙니다.");
+        }
+    }
     public void createAccounts(String name, String accountNum, int password) {
         // 계좌번호 중복 조회
         for (Account account : AccountsAll) {

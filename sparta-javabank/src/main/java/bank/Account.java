@@ -60,7 +60,10 @@ public class Account {
     }
 
     public void withdraw(int money) {
-        this.balance -= money;
+        if (balance < money) {
+            System.out.println("잔액이 부족합니다.");
+            return;
+        }else this.balance -= money;
         System.out.println("결과: 출금이 완료되었습니다.");
     }
 
@@ -69,15 +72,5 @@ public class Account {
     }
 
 
-    public void isAccountNum(String accountNum) {
-        String regExp = "([0-9]{6}\\-[0-9,\\-]{6})";
 
-        boolean result = Pattern.matches(regExp, accountNum);
-        if (result) {
-            System.out.println("계좌번호가 일치합니다"); //숫자 입력한 방식이 계좌 번호 방식(정규식)이 맞는지 먼저 사전에 확인.. 없어도 되는 기능?
-        } else {
-            System.out.println("계좌번호 입력 방식이 아닙니다"); // 이것도 그냥 계좌번호가 아닙니다로?
-        }
-
-    }
 }
