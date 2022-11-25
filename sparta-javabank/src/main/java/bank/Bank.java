@@ -51,18 +51,26 @@ class Bank implements Atm {
         }
 
     } //전체 계좌 조회
-    public void isAccountNum(String accountNum) {
+    public boolean isAccountNum(String accountNum) {
         String regExp = "([0-9]{6}\\-[0-9,\\-]{6})";
 
         boolean result = Pattern.matches(regExp, accountNum);
         if (result) {
-            System.out.println("올바른 계좌번호 형식입니다.");
+//            System.out.println("올바른 계좌번호 형식입니다."); //creatAccounts 중복
+            return true;
         } else {
-            System.out.println("올바른 계좌번호 형식이 아닙니다.");
+//            System.out.println("올바른 계좌번호 형식이 아닙니다."); //creatAccounts 중복
+            return false;
         }
+
     }
     public void createAccounts(String name, String accountNum, int password) {
         // 계좌번호 중복 조회
+        if(isAccountNum(accountNum)) {
+            System.out.println(name + "님의 계좌가 생성되었습니다.");
+        } else {
+            System.out.println("올바른 계좌번호 형식이 아닙니다.");
+        }
         for (Account account : AccountsAll) {
             if (account.getAccountNum().equals(accountNum)) {
                 System.out.println("중복된 계좌번호입니다. 다시 설정해주세요.");
@@ -71,7 +79,7 @@ class Bank implements Atm {
         }
         Account myAccount = new Account(this.bankName, accountNum, name, password);
         AccountsAll.add(myAccount);
-        System.out.println(name + "님의 계좌가 생성되었습니다.");
+
     } // 계좌 생성
     public void removeAccount(String owner, String accNum, int password){
         int idx = this.findAccountIndex(owner, accNum);
