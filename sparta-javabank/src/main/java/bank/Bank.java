@@ -1,5 +1,10 @@
 package bank;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
 class Bank implements Atm {
 
     private String password  = "imbankmaster";
@@ -10,31 +15,34 @@ class Bank implements Atm {
         this.AccountsAll = new ArrayList<>();
     }
 
-    public getBankName() {
+
+    public String getBankName() {
         return bankName;
     } // 은행 이름
-    public getBankPassword() {
-         return password;
+    public String getBankPassword() {
+        return password;
     } // 은행 비밀번호 가져오기 나중에 확인을 위해
-    public getAccounts() {
+    public List getAccounts() {
         return AccountsAll;
     }// 전체 계좌 가져오기
 
-    public boolean checkManager(string password) {
+
+    public boolean checkManager(String password) {
         boolean returnValue = false;
         if (this.password.equals(password)) {
-            returnVaule = ture;
+            returnValue = true;
         }
         return returnValue;
     }// 사용자가 입력한 비밀번호와 지정한 비밀번호 비교하는 함수일치하면 ture, 일치하지않으면 false
 
-    @override
-    public void showAccountsAll(String password); {
 
-        if ( Bank.checkManager(password) ) {
+    @Override
+    public void showAccountsAll(String password) {
+        Bank bank = new Bank();
+        if ( bank.checkManager(password) ) {
             System.out.println("안녕하세요. 현재 생성된 계좌 목록을 아래에 출력합니다."); //checkManger에서 관리자 패스워드 동일시
             for(Account account : AccountsAll){
-                System.out.println(account.getowner() + "|"+ account.getaccountNum() +"|"+ account.getbalance());
+                System.out.println(account.getOwner() + "|"+ account.getAccountNum() +"|"+ account.getBalance());
             }
             System.out.println("-------------------------------------");
         } else {
@@ -42,7 +50,8 @@ class Bank implements Atm {
         }
 
     } //전체 계좌 조회
-    public void createAccount(String name, String accountNum, int password) {
+
+    public void createAccounts(String name, String accountNum, int password) {
         // 계좌번호 중복 조회
         for (Account account : AccountsAll) {
             if (account.getAccountNum().equals(accountNum)) {
@@ -50,19 +59,18 @@ class Bank implements Atm {
                 break;
             }
         }
-        Account myAccount = new Account(this.bankName, accountNum, name, password, 0);
+        Account myAccount = new Account(this.bankName, accountNum, name, password);
         AccountsAll.add(myAccount);
         System.out.println(name + "님의 계좌가 생성되었습니다.");
     } // 계좌 생성
-    public void removeAccount(Sting owner, String accNum, int password){
+    public void removeAccount(String owner, String accNum, int password){
         int idx = this.findAccountIndex(owner, accNum);
-
-        Account newAccount = new Account(bankName,accountNum, owner, password, balance)
-
+        Account newAccount = new Account(bankName, accNum, owner, password);
         Account delAccount = null;
+
         if(idx != -1) {
             delAccount = AccountsAll.remove(idx);
-            System.out.println("계좌 번호 " + delAccount.getAccountNum + " 가 삭제되었습니다.");
+            System.out.println("계좌 번호 " + delAccount.getAccountNum() + " 가 삭제되었습니다.");
         }
         else {
             System.out.println("계좌가 존재하지 않습니다.");
@@ -79,6 +87,7 @@ class Bank implements Atm {
         }
         return -1;
     }
+
     public Account getMyAccount(String name, String accountNum, int password) {
         for (Account account : AccountsAll) {
             if (account.getOwner().equals(name) && account.getAccountNum().equals(accountNum) && account.getPassword() == password) {
@@ -88,15 +97,30 @@ class Bank implements Atm {
         System.out.println("입력한 정보를 다시 확인해주세요.");
         return (Account) Collections.emptyList();
     } // 계좌 검색(찾기)
-    public void searchNameAccount(String name) {
+
+    public Account getMyAccountWithoutPassword(String name, String accountNum) {
         for (Account account : AccountsAll) {
-            if (account.getOwner().equals(name)) {
-                System.out.println(account.getAccountNum());
-                return;
+            if (account.getOwner().equals(name) && account.getAccountNum().equals(accountNum)) {
+                return account;
             }
         }
-        System.out.println("입력한 이름을 다시 확인해주세요.");
+        System.out.println("입력한 정보를 다시 확인해주세요.");
+        return (Account) Collections.emptyList();
+    } // 계좌 검색(찾기)
+
+    public void searchNameAccount(String name) {
+        int flag = 0;
+        for (Account account : AccountsAll) {
+            if (account.getOwner().equals(name)) {
+                flag = 1;
+                System.out.println(account.getAccountNum());
+            }
+        }
+        if (flag == 0) {
+            System.out.println("입력한 이름을 다시 확인해주세요.");
+        }
     } // 내 계좌 찾기 (이름)
+
     public void searchAccountNumAccount(String accountNum) {
         for (Account account : AccountsAll) {
             if (account.getAccountNum().equals(accountNum)) {

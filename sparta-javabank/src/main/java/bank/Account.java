@@ -8,15 +8,14 @@ public class Account {
     String accountNum;
     String owner;
     int password;
-    int balance;
+    int balance = 0;
 
 
-    public Account(String bank, String accountNum, String owner, int password, int balance) {
+    public Account(String bank, String accountNum, String owner, int password) {
         this.bank = bank;
         this.accountNum = accountNum;
         this.owner = owner;
         this.password = password;
-        this.balance = balance;
     }
 
     public String getBank() {
@@ -71,7 +70,7 @@ public class Account {
 
 
     public void isAccountNum(String accountNum) {
-        String regExp = "([0-9]{6}\\-[0-9,\\-]{2}\\-[0-9,\\-]{6})";
+        String regExp = "([0-9]{6}\\-[0-9,\\-]{6})";
 
         boolean result = Pattern.matches(regExp, accountNum);
         if (result) {
