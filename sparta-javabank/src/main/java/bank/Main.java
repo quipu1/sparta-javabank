@@ -72,8 +72,7 @@ public class Main {
                             System.out.print("확인을 위해 비밀번호를 다시 입력해주세요: ");
                             int password = scanner.nextInt();
                             if(myAccount.getPassword == password) {
-                                Account deleted = bank.removeAccount(name3, accNum3, password3);
-                                System.out.println("계좌" + deleted.getAccountNum()+ "가 삭제되었습니다.");
+                                bank.removeAccount(name3, accNum3, password3);
                             }
                             System.out.println("비밀번호를 틀렸습니다.");
                         } else if (selectNum == 3) {
