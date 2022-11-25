@@ -6,18 +6,17 @@ import java.time.format.DateTimeFormatter;
 public class TransactionalInformation {
     String date;
     String time;
-    int accountNum;
+    String accountNum;
     int availability;
     int transactionAmount;
-    String bank;
+    String bank = "4조 은행";
 
-    public TransactionalInformation(String date, String time, int accountNum, int availability, int transactionAmount, String bank) {
+    public TransactionalInformation(String accountNum, int availability, int transactionAmount) {
         this.date = setDate();
         this.time = setTime();
         this.accountNum = accountNum;
         this.availability = availability;
         this.transactionAmount = transactionAmount;
-        this.bank = bank;
     }
     public String setDate(){
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -29,7 +28,7 @@ public class TransactionalInformation {
         return dateTimeFormatter.format(LocalDateTime.now());
     }
     public String getTime(){return time;}
-    public int getAccountNum(){return this.accountNum;}
+    public String getAccountNum(){return this.accountNum;}
 
     public String getAvailability(){
         if(this.availability==1){
