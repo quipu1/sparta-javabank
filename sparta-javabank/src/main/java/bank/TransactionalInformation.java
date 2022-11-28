@@ -24,7 +24,7 @@ public class TransactionalInformation {
     }
     public String getDate(){return date;}
     public String setTime(){
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH-mm");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm");
         return dateTimeFormatter.format(LocalDateTime.now());
     }
     public String getTime(){return time;}

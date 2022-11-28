@@ -66,19 +66,20 @@ class Bank implements Atm {
     }
     public void createAccounts(String name, String accountNum, int password) {
         // 계좌번호 중복 조회
+        for (Account account : AccountsAll) {
+            if (account.getAccountNum().equals(accountNum)) {
+                System.out.println("중복된 계좌번호입니다. 다시 설정해주세요.");
+                return;
+            }
+        }
+        // 계좌번호 형식 체크
         if(isAccountNum(accountNum)) {
+            Account myAccount = new Account(this.bankName, accountNum, name, password);
+            AccountsAll.add(myAccount);
             System.out.println(name + "님의 계좌가 생성되었습니다.");
         } else {
             System.out.println("올바른 계좌번호 형식이 아닙니다.");
         }
-        for (Account account : AccountsAll) {
-            if (account.getAccountNum().equals(accountNum)) {
-                System.out.println("중복된 계좌번호입니다. 다시 설정해주세요.");
-                break;
-            }
-        }
-        Account myAccount = new Account(this.bankName, accountNum, name, password);
-        AccountsAll.add(myAccount);
 
     } // 계좌 생성
     public void removeAccount(String owner, String accNum, int password){
@@ -113,17 +114,17 @@ class Bank implements Atm {
             }
         }
         System.out.println("입력한 정보를 다시 확인해주세요.");
-        return (Account) Collections.emptyList();
+        return null;
     } // 계좌 검색(찾기)
 
-    public Account getMyAccountWithoutPassword(String name, String accountNum) {
+    public Account getMyAccountWithoutPassword(String accountNum) {
         for (Account account : AccountsAll) {
-            if (account.getOwner().equals(name) && account.getAccountNum().equals(accountNum)) {
+            if (account.getAccountNum().equals(accountNum)) {
                 return account;
             }
         }
         System.out.println("입력한 정보를 다시 확인해주세요.");
-        return (Account) Collections.emptyList();
+        return null;
     } // 계좌 검색(찾기)
 
     public void searchNameAccount(String name) {
@@ -135,7 +136,7 @@ class Bank implements Atm {
             }
         }
         if (flag == 0) {
-            System.out.println("입력한 이름을 다시 확인해주세요.");
+            System.out.println("계좌가 존재하지 않습니다. 입력한 이름을 다시 확인해주세요.");
         }
     } // 내 계좌 찾기 (이름)
 
@@ -146,7 +147,7 @@ class Bank implements Atm {
                 return;
             }
         }
-        System.out.println("입력한 계좌번호를 다시 확인해주세요.");
+        System.out.println("계좌가 존재하지 않습니다. 입력한 계좌번호를 다시 확인해주세요.");
     } // 내 계좌 찾기(계좌번호)
 
 
