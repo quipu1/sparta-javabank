@@ -47,13 +47,15 @@ public class Main {
                         System.out.println("계좌번호를 입력해주세요.");
                         System.out.print("계좌번호: ");
                         String accountNum = scanner.next();
+                        System.out.println();
                         bank.searchAccountNumAccount(accountNum);
                         break;
                     } else if (input2 == 2) {
                         System.out.println("이름으로 내 계좌 찾기");
-                        System.out.print("소유주 명을 입력해주세요.");
+                        System.out.println("소유주 명을 입력해주세요.");
                         System.out.print("계좌 소유주 명: ");
                         String owner = scanner.next();
+                        System.out.println();
                         bank.searchNameAccount(owner);
                         break;
                     } else {
