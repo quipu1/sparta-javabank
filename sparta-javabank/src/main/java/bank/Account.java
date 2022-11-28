@@ -59,12 +59,15 @@ public class Account {
         System.out.println("결과: 예금이 완료되었습니다.");
     }
 
-    public void withdraw(int money) {
+    public boolean withdraw(int money) {
         if (balance < money) {
             System.out.println("잔액이 부족합니다.");
-            return;
-        }else this.balance -= money;
-        System.out.println("결과: 출금이 완료되었습니다.");
+            return false;
+        }else {
+            this.balance -= money;
+            System.out.println("결과: 출금이 완료되었습니다.");
+            return true;
+        }
     }
 
     public void changePassword(int password) {
