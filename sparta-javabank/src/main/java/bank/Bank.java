@@ -16,18 +16,6 @@ class Bank implements Atm {
         this.AccountsAll = new ArrayList<>();
     }
 
-
-    public String getBankName() {
-        return bankName;
-    } // 은행 이름
-    public String getBankPassword() {
-        return password;
-    } // 은행 비밀번호 가져오기 나중에 확인을 위해
-    public List getAccounts() {
-        return AccountsAll;
-    }// 전체 계좌 가져오기
-
-
     public boolean checkManager(String password) {
         boolean returnValue = false;
         if (this.password.equals(password)) {
