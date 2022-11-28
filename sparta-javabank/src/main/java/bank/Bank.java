@@ -52,14 +52,11 @@ class Bank implements Atm {
 
     } //전체 계좌 조회
     public boolean isAccountNum(String accountNum) {
-        String regExp = "([0-9]{6}\\-[0-9,\\-]{6})";
-
+        String regExp = "(\\d{6}\\-\\d{6})";;
         boolean result = Pattern.matches(regExp, accountNum);
         if (result) {
-//            System.out.println("올바른 계좌번호 형식입니다."); //creatAccounts 중복
             return true;
         } else {
-//            System.out.println("올바른 계좌번호 형식이 아닙니다."); //creatAccounts 중복
             return false;
         }
 

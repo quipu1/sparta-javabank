@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62952af3-9f92-445d-a969-a7b95e0c2d9a" name="변경" comment="Feat: Main.java println -&gt; print">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Atm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Atm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformationList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/InOutInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/InOutInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/LookupInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/LookupInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/ManagementInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/ManagementInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/StartInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/StartInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/Bank.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +80,26 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bank.Main" />
+      <module name="sparta-javabank.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
