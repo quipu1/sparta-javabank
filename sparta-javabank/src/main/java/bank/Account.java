@@ -1,7 +1,5 @@
 package bank;
 
-import java.util.regex.Pattern;
-
 public class Account {
 
     String bank;
@@ -36,22 +34,8 @@ public class Account {
 
     public int getBalance() {
 
-        // 잔고 조회 메서드() {계좌번호, 소유자 명, 비밀번호 정보 입력}
+
         return balance;
-    }
-
-    public void ChangePassword(int password) {
-
-        //계좌번호, 소유자명, 새로운 비밀번호 입력
-        this.password = password;
-    }
-
-    public static void ChangeBalanceAmount() {
-
-        //입출금 메서드를 나눠서 만들 때
-        //입금 : deposit(String owner, String AccountNum, int money){}
-        //출금 : withdraw(String owner, String AccountNum, int money){}
-
     }
 
     public void deposit(int money) {
