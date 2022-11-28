@@ -132,7 +132,7 @@ class Bank implements Atm {
         for (Account account : AccountsAll) {
             if (account.getOwner().equals(name)) {
                 flag = 1;
-                System.out.printf("계좌 번호 : %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
+                System.out.printf("계좌 번호: %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
                 System.out.println();
             }
         }
@@ -144,7 +144,7 @@ class Bank implements Atm {
     public void searchAccountNumAccount(String accountNum) {
         for (Account account : AccountsAll) {
             if (account.getAccountNum().equals(accountNum)) {
-                System.out.printf("계좌 번호 : %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
+                System.out.printf("계좌 번호: %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
                 System.out.println();
                 return;
             }
