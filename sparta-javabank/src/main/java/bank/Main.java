@@ -9,6 +9,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("👋👋👋👋👋👋👋👋👋👋👋👋👋👋👋");
+        System.out.println("👋김루비호미은행에 오신걸 환영합니다!👋");
+        System.out.println("👋👋👋👋👋👋👋👋👋👋👋👋👋👋👋");
         Scanner scanner = new Scanner(System.in);
         Atm bank = new Bank();
         TransactionalInformationList transactionalInformationList = new TransactionalInformationList();
@@ -66,6 +69,7 @@ public class Main {
                     System.out.print("비밀번호: ");
                     int password3 = scanner.nextInt();
                     Account myAccount = bank.getMyAccount(name3,accNum3, password3);
+                    if(myAccount==null){break;}
                     ManagementInterface managementInterface = new ManagementInterface();
                     managementInterface.run();
                     while(true) {
