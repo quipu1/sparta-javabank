@@ -52,7 +52,7 @@ class Bank implements Atm {
 
     } //전체 계좌 조회
     public boolean isAccountNum(String accountNum) {
-        String regExp = "(\\d{6}\\-\\d{6})";;
+        String regExp = "(\\d{6}\\-\\d{6})";
         boolean result = Pattern.matches(regExp, accountNum);
         if (result) {
             return true;

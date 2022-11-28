@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62952af3-9f92-445d-a969-a7b95e0c2d9a" name="변경" comment="Feat: Main.java println -&gt; print">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Atm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Atm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/TransactionalInformationList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/InOutInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/InOutInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/LookupInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/LookupInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/ManagementInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/ManagementInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/bank/presentation/StartInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/bank/presentation/StartInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/Bank.java" afterDir="false" />
-    </list>
+    <list default="true" id="62952af3-9f92-445d-a969-a7b95e0c2d9a" name="변경" comment="Feat: Main.java println -&gt; print" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
