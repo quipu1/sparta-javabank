@@ -1,6 +1,10 @@
 package bank;
 
 import bank.presentation.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -79,8 +83,9 @@ public class Main {
                             int password3_2 = scanner.nextInt();
                             if(myAccount.getPassword() == password3_2) {
                                 bank.removeAccount(name3, accNum3, password3_2);
+                            } else {
+                                System.out.println("비밀번호를 틀렸습니다.");
                             }
-                            System.out.println("비밀번호를 틀렸습니다.");
                             break;
                         } else if (selectNum == 3) {
                             // 잔고 조회
@@ -115,9 +120,13 @@ public class Main {
                         System.out.println("입금 최대 금액은 20억입니다.");
                         System.out.print("입금할 금액: ");
                         int money = scanner.nextInt();
-                        Account depositAccount = bank.getMyAccountWithoutPassword(name4, account);
-                        depositAccount.deposit(money);
-                        transactionalInformationList.writeTransaction(1, account, money);
+                        if ( bank.getMyAccountWithoutPassword(account) == null) {
+                            break;
+                        } else {
+                            Account depositAccount = bank.getMyAccountWithoutPassword(account);
+                            depositAccount.deposit(money);
+                            transactionalInformationList.writeTransaction(1, account, money);
+                        }
                         break;
                     } else if (input4 == 2) {
                         System.out.println("출금");
@@ -128,9 +137,14 @@ public class Main {
                         String account = scanner.next();
                         System.out.print("출금할 금액: ");
                         int money = scanner.nextInt();
-                        Account withdrawAccount = bank.getMyAccountWithoutPassword(name4_2, account);
-                        withdrawAccount.withdraw(money);
-                        transactionalInformationList.writeTransaction(2, account, money);
+                        if (bank.getMyAccountWithoutPassword(account) == null) {
+                            break;
+                        } else {
+                            Account withdrawAccount = bank.getMyAccountWithoutPassword(account);
+                            if (withdrawAccount.withdraw(money)) {
+                                transactionalInformationList.writeTransaction(2, account, money);
+                            }
+                        }
                         break;
                     } else {
                         System.out.println("잘못 입력하셨습니다.");

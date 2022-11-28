@@ -1,0 +1,20 @@
+
+A
+java:S1700	"+Rename field "TransactionalInformationList"(ñÌÁè
+|	java:S116	"gRename this field "TransactionalInformationList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÌÁè
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ŠŞéÃ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(à³–‚
+N	java:S106"9Replace this use of System.out or System.err by a logger.(éÖŸ‘
+S	java:S106"9Replace this use of System.out or System.err by a logger.(´öğøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(²”Áã
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¨ÔÄŠ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ŠŞéÃ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(à³–‚
+U	java:S106"9Replace this use of System.out or System.err by a logger.(éÖŸ‘8ÏĞ‹îÊ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(´öğøÿÿÿÿ8ÏĞ‹îÊ0
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(²”Áã8ÏĞ‹îÊ0
+U	java:S106+"9Replace this use of System.out or System.err by a logger.(ÃÛ™8ĞĞ‹îÊ0
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(°ÃÓªüÿÿÿÿ8Í£¶îÊ0
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(üÅ€Òúÿÿÿÿ8Ï£¶îÊ0
