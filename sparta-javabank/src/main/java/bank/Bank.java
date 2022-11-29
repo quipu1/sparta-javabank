@@ -16,18 +16,6 @@ class Bank implements Atm {
         this.AccountsAll = new ArrayList<>();
     }
 
-
-    public String getBankName() {
-        return bankName;
-    } // 은행 이름
-    public String getBankPassword() {
-        return password;
-    } // 은행 비밀번호 가져오기 나중에 확인을 위해
-    public List getAccounts() {
-        return AccountsAll;
-    }// 전체 계좌 가져오기
-
-
     public boolean checkManager(String password) {
         boolean returnValue = false;
         if (this.password.equals(password)) {
@@ -52,14 +40,11 @@ class Bank implements Atm {
 
     } //전체 계좌 조회
     public boolean isAccountNum(String accountNum) {
-        String regExp = "([0-9]{6}\\-[0-9,\\-]{6})";
-
+        String regExp = "(\\d{6}\\-\\d{6})";
         boolean result = Pattern.matches(regExp, accountNum);
         if (result) {
-//            System.out.println("올바른 계좌번호 형식입니다."); //creatAccounts 중복
             return true;
         } else {
-//            System.out.println("올바른 계좌번호 형식이 아닙니다."); //creatAccounts 중복
             return false;
         }
 
@@ -132,7 +117,7 @@ class Bank implements Atm {
         for (Account account : AccountsAll) {
             if (account.getOwner().equals(name)) {
                 flag = 1;
-                System.out.printf("계좌 번호 : %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
+                System.out.printf("계좌 번호: %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
                 System.out.println();
             }
         }
@@ -144,7 +129,7 @@ class Bank implements Atm {
     public void searchAccountNumAccount(String accountNum) {
         for (Account account : AccountsAll) {
             if (account.getAccountNum().equals(accountNum)) {
-                System.out.printf("계좌 번호 : %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
+                System.out.printf("계좌 번호: %1$s \t 소유자: %2$s",account.getAccountNum(), account.getOwner());
                 System.out.println();
                 return;
             }
