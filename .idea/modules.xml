@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparta-javabank.iml" filepath="$PROJECT_DIR$/.idea/modules/sparta-javabank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparta-javabank.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sparta-javabank.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparta-javabank.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sparta-javabank.test.iml" />
     </modules>
   </component>
 </project>
